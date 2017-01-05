@@ -16,8 +16,9 @@ class FoodsController < ApplicationController
     end
     @posts = Post.where(category: @category)
   end
-  
+
   def show
+    @post=Post.find(params[:id])
   end
 
   def write
