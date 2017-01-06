@@ -3,5 +3,6 @@ belongs_to 	:user
 has_many	:comments
 validates	:category, :inclusion => { :in => ["한식", "일식", "중식", "양식"], :message => "한식, 일식, 중식, 양식 중 하나를 선택해야합니다."}
 validates	:title, :presence => { :message => "제목을 반드시 입력해야합니다."}
+mount_uploader 	:image, ImageUploader
 
 end
